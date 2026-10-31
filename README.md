@@ -174,6 +174,29 @@ Through this project, I practised:
 * Validating Power BI calculations against SQL results.
 * Communicating analytical findings through visualisations.
 
+  ## Database Setup
+
+The MySQL database structure and synthetic dataset are included in this repository so that the analysis can be reproduced.
+
+### Requirements
+
+* MySQL Server
+* MySQL Workbench or another MySQL-compatible SQL client
+* Power BI Desktop (to explore the dashboards)
+
+### How to Recreate the Database
+
+1. Download [schema.sql](sql/schema.sql) and [sample_data.sql](sql/sample_data.sql).
+2. Open MySQL Workbench and connect to your MySQL server.
+3. Open and execute `schema.sql` to create the database and its tables.
+4. Open and execute `sample_data.sql` to populate the tables with synthetic records.
+5. Open [analysis.sql](sql/analysis.sql) to explore and execute the analytical SQL queries.
+
+The database contains 300 synthetic patients, 900 booking attempts and 209 assisted booking tickets.
+
+**Note:** The dataset is entirely synthetic and is intended for educational and portfolio purposes only.
+
+
 ## Project Structure
 
 ```text
@@ -181,9 +204,10 @@ NHS-Digital-Exclusion-Analytics/
 │
 ├── README.md
 │
-├── sql/
-│   └── analysis.sql
-│
+sql/
+├── analysis.sql
+├── schema.sql
+└── sample_data.sql
 ├── powerbi/
 │   └── NHS_Digital_Exclusion_Analytics.pbix
 │
